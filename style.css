@@ -12,6 +12,7 @@
 }
 
 body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: grid;
     place-items: center;
     background: var(--bg);
@@ -79,18 +80,31 @@ h3 {
 #songs--cambios, #songs--k23, #songs--pinkaura {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     gap: 0.5rem;
     padding: 0.5rem;
     border-radius: 0.65rem;
     height: 100%;
     background: var(--bg-column);
+    
+    overflow-y: auto;
 }
 
 .container__tags {
+    display: flex;
+    gap: 0.5rem;
     padding: 1rem;
     border: 1px solid var(--column-border);
     border-radius: 8px;
-    height: 5rem;
+    height: fit-content;
+    max-width: 60rem;
     background: white;
+    flex-wrap: wrap;
+}
+
+.song--chosen {
+    border: 1px solid green;
+}
+
+.song--drag {
+    opacity: 0;
 }
