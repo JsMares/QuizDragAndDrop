@@ -1,0 +1,96 @@
+:root {
+    --bg: #F8F8F8;
+    --bg-column: #F6F4F5;
+    --column-border: #E1E1E1;
+    --header-color: #6C6E6E;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    background: var(--bg);
+    height: 100vh;
+    width: 100vw;
+}
+
+h3 {
+    font-family: "Monomaniac One", serif;
+    font-size: 2rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.columns {
+    margin: 0 auto;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    background: white;
+    border-radius: 1rem;
+    max-width: 60rem;
+    width: 100%;
+    height: 100%;
+}
+
+.column {
+    border: 1px solid black;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background: white;
+    border-radius: 0.75rem;
+    border: 1px solid var(--column-border);
+    height: 450px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    color: var(--header-color);
+    text-align: center;
+    gap: 1rem;
+}
+
+.portada {
+    height: 200px;
+    border-radius: 8px;
+    border: 1px solid var(--header-color);
+}
+
+.portada img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    object-fit: fill;
+}
+
+#songs--cambios, #songs--k23, #songs--pinkaura {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 0.65rem;
+    height: 100%;
+    background: var(--bg-column);
+}
+
+.container__tags {
+    padding: 1rem;
+    border: 1px solid var(--column-border);
+    border-radius: 8px;
+    height: 5rem;
+    background: white;
+}
